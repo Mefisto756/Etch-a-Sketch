@@ -7,10 +7,13 @@ body {
 }
 
 #container {
-    height: 800px;
+    aspect-ratio: 1 / 1;
     width: 800px;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
+}
+#controlPanel {
+    padding: 20px;
 }
