@@ -11,4 +11,6 @@ body {
     width: 800px;
     background-color: white;
     border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
 }
