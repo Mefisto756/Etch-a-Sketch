@@ -14,6 +14,18 @@ function resetGrid() {
     
 }
 
+function getRandomColor() {
+    // #000000 - #fffff
+        array16 = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        let result = '#';
+        
+        for(let i = 0; i < 6; i++) {
+            result += array16[Math.round(Math.random()*100) % 16];
+        }
+        console.log(result);
+        return result;
+    }
+
 function generateGrid() {
     deleteGrid();
     const size = document.querySelector("#grid").value;
@@ -27,7 +39,7 @@ function generateGrid() {
             div.style.background = "white";
             div.style.width = subDivSize + 'px';
             div.style.height = subDivSize + 'px';
-            div.addEventListener('mouseover', () => {div.style.background = "black";})
+            div.addEventListener('mouseover', () => {div.style.background = getRandomColor();})
             container.appendChild(div);
         }
     }
